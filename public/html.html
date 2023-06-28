@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BTL-PhanThiThanhThuy-B19DCDT240</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./CSS/style.css">  
+    </head>
+    <body>
+        <div class = "row">
+            <div class = " marquee">
+                    <div class = "track">
+                        <div class = "content">&nbsp; WELCOME TO MY DATA - PHAN THI THANH THUY - B19DCDT240</div>
+                    </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col" id="nhietDo">
+            <img class="icon" src="./img/temprature.png" alt="">
+                <h2>NHIỆT ĐỘ</h2>
+                <p id="randomNhietDo" onchange="fsRandomNhietDo()"> </p>
+            </div>
+            <div class="col-lg-4 col" id="doAm">
+                <img class="element-icon" src="./img/drop.png" alt="">
+                <h2>ĐỘ ẨM</h2>
+                <p id="randomDoAm" onchange="fsRandomDoAm()" > </p>
+            </div>
+            <div class="col-lg-4 col" id="anhSang">
+            <img class="element-icon" src="./img/sunny.png" alt="">
+                <h2>ÁNH SÁNG</h2>
+                <p id="randomAnhSang" onchange="fsRandomAnhSang()"> </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 chart">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="btn1" id = "btnled1">
+                        <h2> LED 1 </h2>
+                    <img id="led1"  src="./img/ledOFF.png">
+                    <button type="button" class="btn btn-success" > ON</button>
+                    <button type="button" class="btn btn-danger" >OFF</button>
+                </div>
+
+                <div class="btn1" id="btnled2">
+                    <h2> LED 2 </h2>
+                <img id="led2"  src="./img/ledOFF.png">
+                <button type="button" class="btn btn-light" > ON</button>
+                <button type="button" class="btn btn-dark" >OFF</button>
+                  </div>
+                <!-- <div class="btn1">
+                        <h2> LED 2 </h2>
+                        <img id="led2" src="./img/ledOFF.png">
+					<label class="switch">
+						<input onclick="swi()" type="checkbox" class="btn_led2">
+                            <span class="slider round"></span>
+					</label>
+                    
+                </div> -->
+                
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <!-- <script src="/socket.io/socket.io.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.3/socket.io.min.js"></script>
+        <script src="./JS/chart.js"></script>
+<script src="./JS/led.js"></script>
+        <script src="/server.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,134 @@
+*{ 
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  /* background-color: #a888ef; */
+}
+
+img{
+  width: 15%;
+}
+
+
+.btn{
+  border: 1px solid rgb(255, 206, 230);
+  text-align: center;
+  color: #321d5f;
+  background-color: whitesmoke;
+}
+.btn1{ 
+  text-align: center;
+  background-image: linear-gradient(to bottom , rgb(222, 212, 249), rgb(168, 146, 250), rgb(114, 93, 253));
+  padding: 50px;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.col{  border: 1px solid blanchedalmond;
+  background-image: linear-gradient(to bottom left, rgb(222, 212, 249), rgb(168, 146, 250), rgb(114, 93, 253));
+  text-align: center;
+  float: left;
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 20px 20px 20px 20px;
+  }
+
+/*led 2*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(purple, rgb(91, 39, 143));
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+ 
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: purple;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px pink;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.m{
+  display: none;
+}
+
+#theImage { visibility: hidden; }
+
+/*End:Led 2*/
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #321d5f;
+  text-shadow: 3px 3px 5px rgb(124, 41, 196);
+  font-size: 50px;
+  font-weight: bold;
+}
+
+/* running text effect */
+.marquee {
+  margin: 0;
+  padding: 10;
+  color:black;
+  text-shadow: 3px 3px 5px rgba(124, 41, 196, 0.779);
+  font-weight:200;
+  font-size: 30px;
+  position: relative;
+  width: 100%;  
+  max-width: 200%;
+  height: 100px;
+  overflow-x: hidden;
+
+}
+
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(-100%);}
+  to { transform: translateX(250%);}
+
+}
+
